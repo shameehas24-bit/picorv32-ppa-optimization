@@ -1,0 +1,434 @@
+Warning: No PCF file specified; IO pins will be placed automatically
+
+Info: Packing constants..
+Info: Packing IOs..
+Info: Packing LUT-FFs..
+Info:     1576 LCs used as LUT4 only
+Info:      415 LCs used as LUT4 and DFF
+Info: Packing non-LUT FFs..
+Info:      379 LCs used as DFF only
+Info: Packing carries..
+Info:       64 LCs used as CARRY only
+Info: Packing indirect carry+LUT pairs...
+Info:       32 LUTs merged into carry LCs
+Info: Packing RAMs..
+Info: Placing PLLs..
+Info: Packing special functions..
+Info: Packing PLLs..
+Info: Promoting globals..
+Info: promoting clk$SB_IO_IN (fanout 802)
+Info: promoting core.resetn_SB_LUT4_I3_O [reset] (fanout 220)
+Info: promoting core.instr_beq_SB_LUT4_I3_I0_SB_LUT4_I2_O [reset] (fanout 31)
+Info: promoting core.cpu_state_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_I2_O [cen] (fanout 64)
+Info: promoting core.resetn_SB_LUT4_I3_2_O[0] [cen] (fanout 62)
+Info: promoting core.decoder_pseudo_trigger_SB_LUT4_I2_O[0] [cen] (fanout 49)
+Info: promoting core.decoder_pseudo_trigger_SB_DFFSR_Q_D[2] [cen] (fanout 33)
+Info: Constraining chains...
+Info:        6 LCs used to legalise carry chains.
+Info: Checksum: 0x1264f34f
+
+Info: Annotating ports with timing budgets for target frequency 100.00 MHz
+Info: Checksum: 0x4b19eec8
+
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:  2410/ 7680    31%
+Info: 	        ICESTORM_RAM:     4/   32    12%
+Info: 	               SB_IO:     3/  256     1%
+Info: 	               SB_GB:     7/    8    87%
+Info: 	        ICESTORM_PLL:     0/    2     0%
+Info: 	         SB_WARMBOOT:     0/    1     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 2013 cells, random placement wirelen = 67578.
+Info:     at initial placer iter 0, wirelen = 910
+Info:     at initial placer iter 1, wirelen = 865
+Info:     at initial placer iter 2, wirelen = 826
+Info:     at initial placer iter 3, wirelen = 831
+Info: Running main analytical placer, max placement attempts per cell = 734472.
+Info:     at iteration #1, type ALL: wirelen solved = 793, spread = 17026, legal = 17257; time = 0.06s
+Info:     at iteration #2, type ALL: wirelen solved = 1299, spread = 15736, legal = 16498; time = 0.05s
+Info:     at iteration #3, type ALL: wirelen solved = 1513, spread = 15139, legal = 15687; time = 0.06s
+Info:     at iteration #4, type ALL: wirelen solved = 1889, spread = 14840, legal = 15333; time = 0.06s
+Info:     at iteration #5, type ALL: wirelen solved = 2298, spread = 13829, legal = 14632; time = 0.05s
+Info:     at iteration #6, type ALL: wirelen solved = 2727, spread = 13451, legal = 14300; time = 0.06s
+Info:     at iteration #7, type ALL: wirelen solved = 3200, spread = 12276, legal = 13695; time = 0.06s
+Info:     at iteration #8, type ALL: wirelen solved = 3545, spread = 12075, legal = 13500; time = 0.06s
+Info:     at iteration #9, type ALL: wirelen solved = 4025, spread = 12334, legal = 14041; time = 0.05s
+Info:     at iteration #10, type ALL: wirelen solved = 4252, spread = 11784, legal = 13356; time = 0.05s
+Info:     at iteration #11, type ALL: wirelen solved = 4609, spread = 12022, legal = 13182; time = 0.05s
+Info:     at iteration #12, type ALL: wirelen solved = 5068, spread = 11455, legal = 12936; time = 0.05s
+Info:     at iteration #13, type ALL: wirelen solved = 5305, spread = 11381, legal = 13385; time = 0.06s
+Info:     at iteration #14, type ALL: wirelen solved = 5591, spread = 11040, legal = 12503; time = 0.05s
+Info:     at iteration #15, type ALL: wirelen solved = 5832, spread = 10838, legal = 12340; time = 0.05s
+Info:     at iteration #16, type ALL: wirelen solved = 6094, spread = 10663, legal = 12111; time = 0.05s
+Info:     at iteration #17, type ALL: wirelen solved = 6175, spread = 10402, legal = 11585; time = 0.05s
+Info:     at iteration #18, type ALL: wirelen solved = 6462, spread = 10262, legal = 11680; time = 0.05s
+Info:     at iteration #19, type ALL: wirelen solved = 6617, spread = 10068, legal = 11834; time = 0.05s
+Info:     at iteration #20, type ALL: wirelen solved = 6833, spread = 10370, legal = 11906; time = 0.05s
+Info:     at iteration #21, type ALL: wirelen solved = 6844, spread = 10200, legal = 11597; time = 0.55s
+Info:     at iteration #22, type ALL: wirelen solved = 6968, spread = 10386, legal = 11699; time = 0.06s
+Info: HeAP Placer Time: 2.05s
+Info:   of which solving equations: 1.02s
+Info:   of which spreading cells: 0.13s
+Info:   of which strict legalisation: 0.66s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 163, wirelen = 11585
+Info:   at iteration #5: temp = 0.000000, timing cost = 163, wirelen = 10099
+Info:   at iteration #10: temp = 0.000000, timing cost = 149, wirelen = 9768
+Info:   at iteration #15: temp = 0.000000, timing cost = 160, wirelen = 9463
+Info:   at iteration #20: temp = 0.000000, timing cost = 159, wirelen = 9338
+Info:   at iteration #20: temp = 0.000000, timing cost = 159, wirelen = 9345 
+Info: SA placement time 1.78s
+
+Info: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 68.40 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                       -> posedge clk$SB_IO_IN_$glb_clk: 2.36 ns
+Info: Max delay posedge clk$SB_IO_IN_$glb_clk -> <async>                      : 1.13 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 5 endpoint(s)
+Info:          + represents [1,5) endpoint(s)
+Info: [ -4620,  -3945) |+
+Info: [ -3945,  -3270) | 
+Info: [ -3270,  -2595) |+
+Info: [ -2595,  -1920) |*+
+Info: [ -1920,  -1245) |***+
+Info: [ -1245,   -570) |***********+
+Info: [  -570,    105) |*********+
+Info: [   105,    780) |**********************+
+Info: [   780,   1455) |************************************************************ 
+Info: [  1455,   2130) |*****************************+
+Info: [  2130,   2805) |*********************+
+Info: [  2805,   3480) |*******************+
+Info: [  3480,   4155) |*****************************+
+Info: [  4155,   4830) |******************************************+
+Info: [  4830,   5505) |**************************+
+Info: [  5505,   6180) |***************************+
+Info: [  6180,   6855) |*******************+
+Info: [  6855,   7530) |*******************************************+
+Info: [  7530,   8205) |**************************+
+Info: [  8205,   8880) |**********************************************+
+Info: Checksum: 0x2869d82b
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 7929 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |       87        912 |   87   912 |      7048|       0.49       0.49|
+Info:       2000 |      254       1745 |  167   833 |      6311|       0.30       0.79|
+Info:       3000 |      483       2516 |  229   771 |      5773|       0.34       1.13|
+Info:       4000 |      751       3220 |  268   704 |      5331|       0.33       1.45|
+Info:       5000 |     1125       3846 |  374   626 |      4990|       0.38       1.83|
+Info:       6000 |     1412       4402 |  287   556 |      4496|       0.28       2.11|
+Info:       7000 |     1755       5002 |  343   600 |      4128|       0.38       2.49|
+Info:       8000 |     2170       5559 |  415   557 |      3847|       0.37       2.86|
+Info:       9000 |     2618       6086 |  448   527 |      3568|       0.36       3.22|
+Info:      10000 |     3075       6629 |  457   543 |      3362|       0.45       3.67|
+Info:      11000 |     3416       7287 |  341   658 |      2966|       0.38       4.06|
+Info:      12000 |     3838       7839 |  422   552 |      2684|       0.37       4.42|
+Info:      13000 |     4137       8513 |  299   674 |      2153|       0.24       4.66|
+Info:      14000 |     4488       9162 |  351   649 |      1682|       0.25       4.91|
+Info:      15000 |     4912       9738 |  424   576 |      1338|       0.28       5.19|
+Info:      16000 |     5348      10302 |  436   564 |      1015|       0.25       5.44|
+Info:      17000 |     5852      10798 |  504   496 |       774|       0.30       5.74|
+Info:      18000 |     6366      11284 |  514   486 |       603|       0.41       6.15|
+Info:      19000 |     6766      11878 |  400   594 |       244|       0.32       6.47|
+Info:      19561 |     6965      12241 |  199   363 |         0|       0.30       6.76|
+Info: Routing complete.
+Info: Router1 time 6.76s
+Info: Checksum: 0x1140f5b9
+
+Info: Critical path report for clock 'clk$SB_IO_IN_$glb_clk' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source core.reg_op1_SB_DFFE_Q_27_D_SB_LUT4_O_LC.O
+Info:  1.7  2.2    Net mem_la_addr_SB_LUT4_O_27_I2[0] budget 0.000000 ns (7,14) -> (7,24)
+Info:                Sink core.instr_bgeu_SB_LUT4_I1_I3_SB_CARRY_CO_CI_SB_CARRY_CO_5$CARRY.I3
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:10.74-10.82
+Info:  0.3  2.6  Source core.instr_bgeu_SB_LUT4_I1_I3_SB_CARRY_CO_CI_SB_CARRY_CO_5$CARRY.O
+Info:  0.6  3.1    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I2[4] budget 0.000000 ns (7,24) -> (6,24)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_5$CARRY.I2
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1243.14-1243.31
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:49.21-49.23
+Info:  0.2  3.4  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_5$CARRY.COUT
+Info:  0.0  3.4    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[4] budget 0.000000 ns (6,24) -> (6,24)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_4$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.5  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_4$CARRY.COUT
+Info:  0.0  3.5    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[5] budget 0.000000 ns (6,24) -> (6,24)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_3$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.6  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_3$CARRY.COUT
+Info:  0.0  3.6    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[6] budget 0.000000 ns (6,24) -> (6,24)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_2$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.8  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_2$CARRY.COUT
+Info:  0.2  3.9    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[7] budget 0.190000 ns (6,24) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_1$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.1  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_1$CARRY.COUT
+Info:  0.0  4.1    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[8] budget 0.000000 ns (6,25) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.2  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  4.2    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[9] budget 0.000000 ns (6,25) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_29$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.3  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_29$CARRY.COUT
+Info:  0.0  4.3    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[10] budget 0.000000 ns (6,25) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_28$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.5  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_28$CARRY.COUT
+Info:  0.0  4.5    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[11] budget 0.000000 ns (6,25) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_27$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.6  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_27$CARRY.COUT
+Info:  0.0  4.6    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[12] budget 0.000000 ns (6,25) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_26$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.7  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_26$CARRY.COUT
+Info:  0.0  4.7    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[13] budget 0.000000 ns (6,25) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_25$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.8  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_25$CARRY.COUT
+Info:  0.0  4.8    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[14] budget 0.000000 ns (6,25) -> (6,25)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_24$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.0  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_24$CARRY.COUT
+Info:  0.2  5.2    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[15] budget 0.190000 ns (6,25) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_23$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.3  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_23$CARRY.COUT
+Info:  0.0  5.3    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[16] budget 0.000000 ns (6,26) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_22$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.4  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_22$CARRY.COUT
+Info:  0.0  5.4    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[17] budget 0.000000 ns (6,26) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_21$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.5  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_21$CARRY.COUT
+Info:  0.0  5.5    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[18] budget 0.000000 ns (6,26) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_20$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.7  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_20$CARRY.COUT
+Info:  0.0  5.7    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[19] budget 0.000000 ns (6,26) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_18$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.8  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_18$CARRY.COUT
+Info:  0.0  5.8    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[20] budget 0.000000 ns (6,26) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_17$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.9  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_17$CARRY.COUT
+Info:  0.0  5.9    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[21] budget 0.000000 ns (6,26) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_16$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.0  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_16$CARRY.COUT
+Info:  0.0  6.0    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[22] budget 0.000000 ns (6,26) -> (6,26)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_15$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.2  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_15$CARRY.COUT
+Info:  0.2  6.4    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[23] budget 0.190000 ns (6,26) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_14$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.5  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_14$CARRY.COUT
+Info:  0.0  6.5    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[24] budget 0.000000 ns (6,27) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_13$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.6  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_13$CARRY.COUT
+Info:  0.0  6.6    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[25] budget 0.000000 ns (6,27) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_12$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.7  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_12$CARRY.COUT
+Info:  0.0  6.7    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[26] budget 0.000000 ns (6,27) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_11$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.9  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_11$CARRY.COUT
+Info:  0.0  6.9    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[27] budget 0.000000 ns (6,27) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_10$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  7.0  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_10$CARRY.COUT
+Info:  0.0  7.0    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[28] budget 0.000000 ns (6,27) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_9$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  7.1  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_9$CARRY.COUT
+Info:  0.0  7.1    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[29] budget 0.000000 ns (6,27) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_7$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  7.2  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I3_SB_CARRY_CO_7$CARRY.COUT
+Info:  0.0  7.2    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[30] budget 0.000000 ns (6,27) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_LC.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  7.4  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_LC.COUT
+Info:  0.5  7.8    Net $nextpnr_ICESTORM_LC_0$I3 budget 0.560000 ns (6,27) -> (6,28)
+Info:                Sink $nextpnr_ICESTORM_LC_0.I3
+Info:  0.3  8.1  Source $nextpnr_ICESTORM_LC_0.O
+Info:  0.6  8.7    Net core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_I0[31] budget 0.914000 ns (6,28) -> (6,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_LC.I0
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1242.14-1242.49
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:37.23-37.25
+Info:  0.4  9.2  Source core.instr_bge_SB_LUT4_I1_I3_SB_LUT4_O_LC.O
+Info:  1.2 10.4    Net core.instr_bge_SB_LUT4_I1_I3[3] budget 0.456000 ns (6,27) -> (12,27)
+Info:                Sink core.instr_bge_SB_LUT4_I1_LC.I3
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 10.7  Source core.instr_bge_SB_LUT4_I1_LC.O
+Info:  0.6 11.3    Net core.instr_bne_SB_LUT4_I2_O[2] budget 0.342000 ns (12,27) -> (12,28)
+Info:                Sink core.alu_out_SB_LUT4_O_31_I1_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 11.6  Source core.alu_out_SB_LUT4_O_31_I1_SB_LUT4_O_LC.O
+Info:  0.6 12.2    Net core.alu_out_SB_LUT4_O_31_I1[0] budget 0.342000 ns (12,28) -> (13,29)
+Info:                Sink core.alu_out_SB_LUT4_O_31_I1_SB_LUT4_I2_1_LC.I2
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.4 12.6  Source core.alu_out_SB_LUT4_O_31_I1_SB_LUT4_I2_1_LC.O
+Info:  0.6 13.2    Net core.alu_out_SB_LUT4_O_31_I1_SB_LUT4_I2_1_O[0] budget 0.345000 ns (13,29) -> (14,30)
+Info:                Sink core.mem_do_rinst_SB_DFFESS_Q_S_SB_LUT4_O_LC.I2
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.4 13.5  Source core.mem_do_rinst_SB_DFFESS_Q_S_SB_LUT4_O_LC.O
+Info:  1.2 14.7    Net core.mem_do_rinst_SB_DFFESS_Q_S budget 0.344000 ns (14,30) -> (14,31)
+Info:                Sink core.mem_do_rinst_SB_DFFESS_Q_D_SB_LUT4_O_LC.SR
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/orig/picorv32.v:1402.2-1975.5
+Info:  0.1 14.8  Setup core.mem_do_rinst_SB_DFFESS_Q_D_SB_LUT4_O_LC.SR
+Info: 6.7 ns logic, 8.1 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge clk$SB_IO_IN_$glb_clk':
+Info: curr total
+Info:  0.0  0.0  Source din$sb_io.D_IN_0
+Info:  1.9  1.9    Net din$SB_IO_IN budget 9.532000 ns (33,14) -> (20,14)
+Info:                Sink in_sr_SB_DFF_Q_31_DFFLC.I0
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:5.35-5.38
+Info:  0.5  2.4  Setup in_sr_SB_DFF_Q_31_DFFLC.I0
+Info: 0.5 ns logic, 1.9 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk$SB_IO_IN_$glb_clk' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source dout_SB_DFF_Q_D_SB_LUT4_O_LC.O
+Info:  0.6  1.1    Net dout$SB_IO_OUT budget 9.460000 ns (1,27) -> (0,27)
+Info:                Sink dout$sb_io.D_OUT_0
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:5.51-5.55
+Info: 0.5 ns logic, 0.6 ns routing
+
+ERROR: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 67.56 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                       -> posedge clk$SB_IO_IN_$glb_clk: 2.37 ns
+Info: Max delay posedge clk$SB_IO_IN_$glb_clk -> <async>                      : 1.13 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 7 endpoint(s)
+Info:          + represents [1,7) endpoint(s)
+Info: [ -4801,  -4117) |+
+Info: [ -4117,  -3433) |+
+Info: [ -3433,  -2749) | 
+Info: [ -2749,  -2065) |+
+Info: [ -2065,  -1381) |**+
+Info: [ -1381,   -697) |******+
+Info: [  -697,    -13) |***+
+Info: [   -13,    671) |*******+
+Info: [   671,   1355) |*************+
+Info: [  1355,   2039) |*********************+
+Info: [  2039,   2723) |**************+
+Info: [  2723,   3407) |*********************+
+Info: [  3407,   4091) |************************************************************ 
+Info: [  4091,   4775) |****************************+
+Info: [  4775,   5459) |**********************************+
+Info: [  5459,   6143) |********************+
+Info: [  6143,   6827) |****************+
+Info: [  6827,   7511) |********************************+
+Info: [  7511,   8195) |*****************+
+Info: [  8195,   8879) |***********************************+
+1 warning, 1 error
+
+Info: Program finished normally.

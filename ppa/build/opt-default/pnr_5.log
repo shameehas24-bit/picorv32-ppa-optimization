@@ -1,0 +1,452 @@
+Warning: No PCF file specified; IO pins will be placed automatically
+
+Info: Packing constants..
+Info: Packing IOs..
+Info: Packing LUT-FFs..
+Info:     1370 LCs used as LUT4 only
+Info:      425 LCs used as LUT4 and DFF
+Info: Packing non-LUT FFs..
+Info:      376 LCs used as DFF only
+Info: Packing carries..
+Info:       39 LCs used as CARRY only
+Info: Packing indirect carry+LUT pairs...
+Info:       37 LUTs merged into carry LCs
+Info: Packing RAMs..
+Info: Placing PLLs..
+Info: Packing special functions..
+Info: Packing PLLs..
+Info: Promoting globals..
+Info: promoting clk$SB_IO_IN (fanout 809)
+Info: promoting core.resetn_SB_LUT4_I3_O [reset] (fanout 220)
+Info: promoting core.decoded_imm_SB_DFFE_Q_D_SB_LUT4_O_I2_SB_LUT4_I3_O_SB_LUT4_I3_O [reset] (fanout 31)
+Info: promoting core.cpu_state_SB_DFF_Q_4_D_SB_LUT4_O_I1_SB_LUT4_I2_O [cen] (fanout 64)
+Info: promoting core.latched_store_SB_DFFESR_Q_E_SB_LUT4_O_I3[0] [cen] (fanout 62)
+Info: promoting core.decoder_pseudo_trigger_SB_LUT4_I2_O[0] [cen] (fanout 50)
+Info: promoting core.decoder_pseudo_trigger_SB_DFFSR_Q_D[2] [cen] (fanout 33)
+Info: Constraining chains...
+Info:        9 LCs used to legalise carry chains.
+Info: Checksum: 0xbad4046e
+
+Info: Annotating ports with timing budgets for target frequency 100.00 MHz
+Info: Checksum: 0x0d6bd47d
+
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:  2184/ 7680    28%
+Info: 	        ICESTORM_RAM:     4/   32    12%
+Info: 	               SB_IO:     3/  256     1%
+Info: 	               SB_GB:     7/    8    87%
+Info: 	        ICESTORM_PLL:     0/    2     0%
+Info: 	         SB_WARMBOOT:     0/    1     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 1807 cells, random placement wirelen = 61275.
+Info:     at initial placer iter 0, wirelen = 1087
+Info:     at initial placer iter 1, wirelen = 1077
+Info:     at initial placer iter 2, wirelen = 1075
+Info:     at initial placer iter 3, wirelen = 1077
+Info: Running main analytical placer, max placement attempts per cell = 603900.
+Info:     at iteration #1, type ALL: wirelen solved = 1075, spread = 13668, legal = 15118; time = 0.06s
+Info:     at iteration #2, type ALL: wirelen solved = 1154, spread = 12775, legal = 14736; time = 0.10s
+Info:     at iteration #3, type ALL: wirelen solved = 1402, spread = 12289, legal = 13959; time = 0.05s
+Info:     at iteration #4, type ALL: wirelen solved = 1907, spread = 11447, legal = 12535; time = 0.05s
+Info:     at iteration #5, type ALL: wirelen solved = 2361, spread = 10815, legal = 12231; time = 0.05s
+Info:     at iteration #6, type ALL: wirelen solved = 2567, spread = 10859, legal = 12104; time = 0.05s
+Info:     at iteration #7, type ALL: wirelen solved = 3498, spread = 10148, legal = 11270; time = 0.05s
+Info:     at iteration #8, type ALL: wirelen solved = 3743, spread = 10404, legal = 11663; time = 0.06s
+Info:     at iteration #9, type ALL: wirelen solved = 3930, spread = 10409, legal = 11413; time = 0.31s
+Info:     at iteration #10, type ALL: wirelen solved = 4302, spread = 10156, legal = 11635; time = 0.07s
+Info:     at iteration #11, type ALL: wirelen solved = 4559, spread = 10339, legal = 11610; time = 0.38s
+Info:     at iteration #12, type ALL: wirelen solved = 4840, spread = 10163, legal = 11840; time = 0.06s
+Info: HeAP Placer Time: 1.62s
+Info:   of which solving equations: 0.63s
+Info:   of which spreading cells: 0.07s
+Info:   of which strict legalisation: 0.73s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 77, wirelen = 11270
+Info:   at iteration #5: temp = 0.000000, timing cost = 113, wirelen = 9700
+Info:   at iteration #10: temp = 0.000000, timing cost = 97, wirelen = 9224
+Info:   at iteration #15: temp = 0.000000, timing cost = 127, wirelen = 8916
+Info:   at iteration #20: temp = 0.000000, timing cost = 126, wirelen = 8709
+Info:   at iteration #25: temp = 0.000000, timing cost = 123, wirelen = 8643
+Info:   at iteration #30: temp = 0.000000, timing cost = 122, wirelen = 8617
+Info:   at iteration #31: temp = 0.000000, timing cost = 123, wirelen = 8616 
+Info: SA placement time 2.59s
+
+Info: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 67.76 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                       -> posedge clk$SB_IO_IN_$glb_clk: 1.68 ns
+Info: Max delay posedge clk$SB_IO_IN_$glb_clk -> <async>                      : 1.68 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 5 endpoint(s)
+Info:          + represents [1,5) endpoint(s)
+Info: [ -4757,  -4092) |+
+Info: [ -4092,  -3427) |+
+Info: [ -3427,  -2762) |+
+Info: [ -2762,  -2097) |****+
+Info: [ -2097,  -1432) |***+
+Info: [ -1432,   -767) |*****+
+Info: [  -767,   -102) |******+
+Info: [  -102,    563) |***********+
+Info: [   563,   1228) |**************+
+Info: [  1228,   1893) |**************************************+
+Info: [  1893,   2558) |********************************************+
+Info: [  2558,   3223) |********************************+
+Info: [  3223,   3888) |************************+
+Info: [  3888,   4553) |*******************************+
+Info: [  4553,   5218) |**************************************+
+Info: [  5218,   5883) |************************+
+Info: [  5883,   6548) |*******************+
+Info: [  6548,   7213) |*************+
+Info: [  7213,   7878) |************************************************************ 
+Info: [  7878,   8543) |*****************************************************+
+Info: Checksum: 0xa51d4d84
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 7286 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |       81        918 |   81   918 |      6454|       0.56       0.56|
+Info:       2000 |      277       1722 |  196   804 |      5742|       0.31       0.87|
+Info:       3000 |      445       2526 |  168   804 |      5106|       0.31       1.19|
+Info:       4000 |      672       3249 |  227   723 |      4575|       0.33       1.52|
+Info:       5000 |      938       3856 |  266   607 |      4081|       0.32       1.83|
+Info:       6000 |     1220       4459 |  282   603 |      3508|       0.22       2.06|
+Info:       7000 |     1573       5101 |  353   642 |      3015|       0.33       2.39|
+Info:       8000 |     1954       5720 |  381   619 |      2700|       0.35       2.74|
+Info:       9000 |     2383       6291 |  429   571 |      2333|       0.30       3.04|
+Info:      10000 |     2755       6919 |  372   628 |      1979|       0.34       3.38|
+Info:      11000 |     3243       7431 |  488   512 |      1783|       0.44       3.82|
+Info:      12000 |     3678       7996 |  435   565 |      1502|       0.36       4.18|
+Info:      13000 |     4126       8548 |  448   552 |      1111|       0.31       4.49|
+Info:      14000 |     4540       9130 |  414   582 |       723|       0.26       4.76|
+Info:      15000 |     5132       9532 |  592   402 |       516|       0.40       5.16|
+Info:      15944 |     5452      10157 |  320   625 |         0|       0.41       5.56|
+Info: Routing complete.
+Info: Router1 time 5.56s
+Info: Checksum: 0x6b1c8197
+
+Info: Critical path report for clock 'clk$SB_IO_IN_$glb_clk' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source core.reg_op2_SB_DFFE_Q_31_D_SB_LUT4_O_LC.O
+Info:  0.6  1.1    Net mem_la_wdata[0] budget 0.000000 ns (5,8) -> (5,9)
+Info:                Sink core.alu_out_SB_LUT4_O_31_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CO_30$CARRY.I3
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:10.84-10.92
+Info:  0.3  1.4  Source core.alu_out_SB_LUT4_O_31_I2_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CO_30$CARRY.O
+Info:  0.6  2.0    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_I1[0] budget 0.000000 ns (5,9) -> (6,8)
+Info:                Sink core.alu_out_SB_LUT4_O_31_I2_SB_LUT4_O_I1_SB_LUT4_O_31_LC.I2
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:49.21-49.23
+Info:  0.2  2.3  Source core.alu_out_SB_LUT4_O_31_I2_SB_LUT4_O_I1_SB_LUT4_O_31_LC.COUT
+Info:  0.0  2.3    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[1] budget 0.000000 ns (6,8) -> (6,8)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_20$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  2.4  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_20$CARRY.COUT
+Info:  0.0  2.4    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[2] budget 0.000000 ns (6,8) -> (6,8)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_9$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  2.5  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_9$CARRY.COUT
+Info:  0.0  2.5    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[3] budget 0.000000 ns (6,8) -> (6,8)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_6$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  2.6  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_6$CARRY.COUT
+Info:  0.0  2.6    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[4] budget 0.000000 ns (6,8) -> (6,8)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_5$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  2.8  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_5$CARRY.COUT
+Info:  0.0  2.8    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[5] budget 0.000000 ns (6,8) -> (6,8)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_4$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  2.9  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_4$CARRY.COUT
+Info:  0.0  2.9    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[6] budget 0.000000 ns (6,8) -> (6,8)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_3$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.0  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_3$CARRY.COUT
+Info:  0.0  3.0    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[7] budget 0.000000 ns (6,8) -> (6,8)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_2$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.1  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_2$CARRY.COUT
+Info:  0.2  3.3    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[8] budget 0.190000 ns (6,8) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_1$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.5  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_1$CARRY.COUT
+Info:  0.0  3.5    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[9] budget 0.000000 ns (6,9) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.6  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  3.6    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[10] budget 0.000000 ns (6,9) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_30$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.7  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_30$CARRY.COUT
+Info:  0.0  3.7    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[11] budget 0.000000 ns (6,9) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_29$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  3.8  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_29$CARRY.COUT
+Info:  0.0  3.8    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[12] budget 0.000000 ns (6,9) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_28$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.0  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_28$CARRY.COUT
+Info:  0.0  4.0    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[13] budget 0.000000 ns (6,9) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_27$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.1  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_27$CARRY.COUT
+Info:  0.0  4.1    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[14] budget 0.000000 ns (6,9) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_26$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.2  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_26$CARRY.COUT
+Info:  0.0  4.2    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[15] budget 0.000000 ns (6,9) -> (6,9)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_25$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.3  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_25$CARRY.COUT
+Info:  0.2  4.5    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[16] budget 0.190000 ns (6,9) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_24$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.7  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_24$CARRY.COUT
+Info:  0.0  4.7    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[17] budget 0.000000 ns (6,10) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_23$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.8  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_23$CARRY.COUT
+Info:  0.0  4.8    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[18] budget 0.000000 ns (6,10) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_22$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  4.9  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_22$CARRY.COUT
+Info:  0.0  4.9    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[19] budget 0.000000 ns (6,10) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_21$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.0  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_21$CARRY.COUT
+Info:  0.0  5.0    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[20] budget 0.000000 ns (6,10) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_19$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.2  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_19$CARRY.COUT
+Info:  0.0  5.2    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[21] budget 0.000000 ns (6,10) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_18$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.3  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_18$CARRY.COUT
+Info:  0.0  5.3    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[22] budget 0.000000 ns (6,10) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_17$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.4  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_17$CARRY.COUT
+Info:  0.0  5.4    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[23] budget 0.000000 ns (6,10) -> (6,10)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_16$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.6  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_16$CARRY.COUT
+Info:  0.2  5.7    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[24] budget 0.190000 ns (6,10) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_15$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  5.9  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_15$CARRY.COUT
+Info:  0.0  5.9    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[25] budget 0.000000 ns (6,11) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_14$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.0  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_14$CARRY.COUT
+Info:  0.0  6.0    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[26] budget 0.000000 ns (6,11) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_13$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.1  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_13$CARRY.COUT
+Info:  0.0  6.1    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[27] budget 0.000000 ns (6,11) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_12$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.3  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_12$CARRY.COUT
+Info:  0.0  6.3    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[28] budget 0.000000 ns (6,11) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_11$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.4  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_11$CARRY.COUT
+Info:  0.0  6.4    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[29] budget 0.000000 ns (6,11) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_10$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.5  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_10$CARRY.COUT
+Info:  0.0  6.5    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[30] budget 0.000000 ns (6,11) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_8$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.6  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_8$CARRY.COUT
+Info:  0.0  6.6    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[31] budget 0.000000 ns (6,11) -> (6,11)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_7$CARRY.CIN
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.1  6.8  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3_SB_CARRY_CO_7$CARRY.COUT
+Info:  0.5  7.2    Net $nextpnr_ICESTORM_LC_8$I3 budget 0.560000 ns (6,11) -> (6,12)
+Info:                Sink $nextpnr_ICESTORM_LC_8.I3
+Info:  0.3  7.5  Source $nextpnr_ICESTORM_LC_8.O
+Info:  1.3  8.8    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_I3[32] budget 0.406000 ns (6,12) -> (10,15)
+Info:                Sink core.is_sltiu_bltu_sltu_SB_LUT4_I2_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:14.12-22.80
+Info:                  rtl/opt/picorv32.v:1231.29-1231.62
+Info:                  /usr/bin/../share/yosys/ice40/arith_map.v:51.21-51.22
+Info:  0.3  9.1  Source core.is_sltiu_bltu_sltu_SB_LUT4_I2_O_SB_LUT4_O_LC.O
+Info:  0.6  9.7    Net core.is_sltiu_bltu_sltu_SB_LUT4_I2_O[2] budget 0.405000 ns (10,15) -> (11,16)
+Info:                Sink core.is_slti_blt_slt_SB_LUT4_I0_LC.I2
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.4 10.1  Source core.is_slti_blt_slt_SB_LUT4_I0_LC.O
+Info:  0.6 10.7    Net core.is_slti_blt_slt_SB_LUT4_I0_O[3] budget 0.405000 ns (11,16) -> (11,17)
+Info:                Sink core.instr_bne_SB_LUT4_I1_LC.I3
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 11.0  Source core.instr_bne_SB_LUT4_I1_LC.O
+Info:  0.6 11.6    Net core.alu_out_SB_LUT4_O_31_I2[1] budget 0.304000 ns (11,17) -> (12,18)
+Info:                Sink core.instr_sll_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O_LC.I2
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.4 11.9  Source core.instr_sll_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O_LC.O
+Info:  0.6 12.5    Net core.decoder_trigger_SB_DFF_Q_D_SB_LUT4_O_I3[1] budget 0.304000 ns (12,18) -> (13,19)
+Info:                Sink core.instr_sll_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_I2_LC.I2
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.4 12.9  Source core.instr_sll_SB_LUT4_I0_O_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_I2_LC.O
+Info:  0.6 13.5    Net core.mem_do_rinst_SB_DFFESS_Q_S[0] budget 0.303000 ns (13,19) -> (13,19)
+Info:                Sink core.mem_do_rinst_SB_DFFESS_Q_E_SB_LUT4_O_LC.I1
+Info:                Defined in:
+Info:                  /usr/bin/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.4 13.9  Source core.mem_do_rinst_SB_DFFESS_Q_E_SB_LUT4_O_LC.O
+Info:  1.8 15.7    Net core.mem_do_rinst_SB_DFFESS_Q_E budget 0.303000 ns (13,19) -> (13,19)
+Info:                Sink core.mem_do_rinst_SB_DFFESS_Q_D_SB_LUT4_O_LC.CEN
+Info:  0.1 15.8  Setup core.mem_do_rinst_SB_DFFESS_Q_D_SB_LUT4_O_LC.CEN
+Info: 7.6 ns logic, 8.3 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge clk$SB_IO_IN_$glb_clk':
+Info: curr total
+Info:  0.0  0.0  Source din$sb_io.D_IN_0
+Info:  1.0  1.0    Net din$SB_IO_IN budget 9.532000 ns (17,0) -> (17,3)
+Info:                Sink in_sr_SB_DFF_Q_31_DFFLC.I0
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:5.35-5.38
+Info:  0.5  1.4  Setup in_sr_SB_DFF_Q_31_DFFLC.I0
+Info: 0.5 ns logic, 1.0 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk$SB_IO_IN_$glb_clk' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source dout_SB_DFF_Q_D_SB_LUT4_O_LC.O
+Info:  1.0  1.5    Net dout$SB_IO_OUT budget 9.460000 ns (2,7) -> (0,7)
+Info:                Sink dout$sb_io.D_OUT_0
+Info:                Defined in:
+Info:                  scripts/fmax_top.v:5.51-5.55
+Info: 0.5 ns logic, 1.0 ns routing
+
+ERROR: Max frequency for clock 'clk$SB_IO_IN_$glb_clk': 63.14 MHz (FAIL at 100.00 MHz)
+
+Info: Max delay <async>                       -> posedge clk$SB_IO_IN_$glb_clk: 1.43 ns
+Info: Max delay posedge clk$SB_IO_IN_$glb_clk -> <async>                      : 1.50 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 6 endpoint(s)
+Info:          + represents [1,6) endpoint(s)
+Info: [ -5838,  -5117) |+
+Info: [ -5117,  -4396) | 
+Info: [ -4396,  -3675) |+
+Info: [ -3675,  -2954) |+
+Info: [ -2954,  -2233) |+
+Info: [ -2233,  -1512) |***+
+Info: [ -1512,   -791) |***+
+Info: [  -791,    -70) |**********+
+Info: [   -70,    651) |********+
+Info: [   651,   1372) |***********+
+Info: [  1372,   2093) |************+
+Info: [  2093,   2814) |*************+
+Info: [  2814,   3535) |*******************+
+Info: [  3535,   4256) |****************************************+
+Info: [  4256,   4977) |******************************************+
+Info: [  4977,   5698) |************************************************************ 
+Info: [  5698,   6419) |***************+
+Info: [  6419,   7140) |**************+
+Info: [  7140,   7861) |**************************************+
+Info: [  7861,   8582) |**************************************************+
+1 warning, 1 error
+
+Info: Program finished normally.
