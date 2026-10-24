@@ -1,0 +1,1 @@
+opt barrel cells=7628 ffs=1590 comb=6038 depth=63 luts=1726 fmax_best=63.96 fmax_avg=61.16 fmax_all=[ 57.68 63.96 62.97 57.54 63.64] | RESULT=e9ad7dac HASH=7dd73236 CYCLES=19931 | toggles=6916766 cycles=19927 tpc=347.11

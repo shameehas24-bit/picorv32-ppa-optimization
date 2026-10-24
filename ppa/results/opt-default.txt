@@ -1,0 +1,1 @@
+opt default cells=7624 ffs=1597 comb=6027 depth=65 luts=1652 fmax_best=64.97 fmax_avg=62.44 fmax_all=[ 61.06 64.97 60.52 62.53 63.14] | RESULT=e9ad7dac HASH=7dd73236 CYCLES=20514 | toggles=7194775 cycles=20510 tpc=350.79

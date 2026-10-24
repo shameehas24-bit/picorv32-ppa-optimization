@@ -1,0 +1,1 @@
+abl_E2 barrel cells=7592 ffs=1590 comb=6002 depth=63 luts=1757 fmax_best=65.01 fmax_avg=61.27 fmax_all=[ 59.21 65.01 63.00 59.56 59.58] | RESULT=e9ad7dac HASH=7dd73236 CYCLES=19931 | toggles=6834493 cycles=19927 tpc=342.98
